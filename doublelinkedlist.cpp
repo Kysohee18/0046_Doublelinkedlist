@@ -55,7 +55,14 @@ class DoubleLinkedList
             //step 7 
             START = newNode;
             return;
-            
+
+           }
+           // insert in beetween mode 
+           //step 8: location potition for insertion
+           Node *current = START;
+           while (current ->next !=NULL && current ->next->noMhs <nim )
+           {
+            current = current->next;
            }
         }
 
