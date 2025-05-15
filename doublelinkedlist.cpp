@@ -199,6 +199,17 @@ class DoubleLinkedList
 
 
     }
+    void searchData()
+    {
+        if (START == NULL)
+        {
+            cout << "nList is empty" << endl;
+            return;
+        }
+
+       
+
+    }
 
         
 
