@@ -11,7 +11,7 @@ class Node
 };
 
 class DoubleLinkedList
-    {
+{
     private:
         Node * START; 
     
@@ -44,13 +44,19 @@ class DoubleLinkedList
                 }
                 // step 4: newnode .next =  start
                 newNode->next = START;
-                
+
+            //step 5 if start exits
+            if (START != NULL)
+                START->prev = newNode;
+            
+
+
             
             
-            }
+           }
+        }
 
 
         
     
-
-    };
+};
