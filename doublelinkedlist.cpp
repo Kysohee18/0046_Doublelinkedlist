@@ -112,7 +112,8 @@ class DoubleLinkedList
             }
             else
             {
-                //step
+                //step 3 link previus node
+                current->prev->next = current ->next;
             }
 
         }
