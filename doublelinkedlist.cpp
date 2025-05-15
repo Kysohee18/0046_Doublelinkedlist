@@ -13,17 +13,29 @@ class Node
 class DoubleLinkedList
     {
     private:
-        Node * start; 
+        Node * START; 
     
     public:
         DoubleLinkedList()
         {
-            start = NULL;
+            START = NULL;
         }
 
-        
+        void addNode()
+        {
+            int nim;
+            string nm;
+            cout << "\nEnter the roll number of the student";
+            cin >> nim;
+
+            // Step 1: Allcate memory for new node
+            Node *newNode = new Node();
+
+            
+            }
+
 
         
     
-    
-    };
+
+    }
