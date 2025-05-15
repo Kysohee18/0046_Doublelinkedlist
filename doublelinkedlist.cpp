@@ -10,3 +10,9 @@ class Node
     Node * prev;
 };
 
+class DoubleLinkedList
+    {
+    private:
+        Node * start; 
+    }
+    
