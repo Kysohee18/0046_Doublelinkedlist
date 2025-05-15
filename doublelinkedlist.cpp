@@ -119,9 +119,20 @@ class DoubleLinkedList
                 if (current->next !=NULL)
                     current->next->prev =current->prev;
             }
-            
-
+            //step 5 delete the node
+            delete current;
+            cout <<"record with roll number"<<rollNo<<"delete" <<endl;
         }
+        void traverse ()
+    {
+        if (START == NULL)
+        {
+            cout << "nList is empty" << endl;
+            return;
+        }
+
+      
+    } 
 
 
         
