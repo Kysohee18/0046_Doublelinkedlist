@@ -130,6 +130,10 @@ class DoubleLinkedList
             cout << "nList is empty" << endl;
             return;
         }
+          //step 1 mark first node a currentNode
+        Node *currentNode = START;
+      
+        }
 
       
     } 
