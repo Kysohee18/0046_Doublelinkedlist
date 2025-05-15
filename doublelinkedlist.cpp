@@ -93,6 +93,15 @@ class DoubleLinkedList
            cin >> rollNo;
 
            Node *current = START;
+           //step 1 traverse the lost tp final node
+           while (current != NULL && current->noMhs != rollNo)
+                current = current->next;
+
+            if (current == NULL)
+            {
+                cout << "Record not found" << endl;
+                return;
+            }
         }
 
 
