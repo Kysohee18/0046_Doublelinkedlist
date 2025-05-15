@@ -147,11 +147,100 @@ class DoubleLinkedList
         i++;
         }
     }  
-     void revtravarse()
- 
-        
+void revtravarse()
+    {
+        if (START = NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
+        }
 
+        //step 1 move to the last node
+        Node *currentNode = START;
+        int i = 0;
+        while (currentNode->next != NULL)
+        {
+            currentNode = currentNode->prev;
+            i--;
+            
+        }
+        //step 2 traverse backward
+        cout << "\nRecords in descending order of roll number are:\n";
+        while (currentNode != NULL)
+        {
+            cout << i + i << ". " << currentNode->noMhs << " " << endl;
 
+            //step 3
+            currentNode = currentNode->prev;
+            i--;
+
+        }
+        void searchdata() 
+        {
+            if (START == NULL){
+                cout << "\nList is empty" << endl;
+                return;
+            }
+
+            int rollNo;
+            cout << "\nEnter the roll number to search: ";
+            cin >> rollNo;
+
+            Node *current = START;
+
+            while (current != NULL && current -> noMhs != rollNo){
+                current = current -> next;
+            }
+            if (current == NULL){
+                cout << "Record Not Found\n";
+            }else{
+                cout << "Record Found\n";
+                cout << "Roll Member: " << current -> noMhs << endl;
+            }
+        };
+};
+
+int main(){
+    DoubleLinkedList list;
+    char choice;
+    do
+    {
+        cout << "\nMenu: \n";
+        cout << "1. Add Record\n";
+        cout << "2. Delete Record\n";
+        cout << "3. View Ascending\n";
+        cout << "4. View Descending\n";
+        cout << "5. Search Record\n";
+        cout << "6. exit\n"; 
+        cout << "Enter The Number: ";
+        cin >> choice;
         
-    
+        switch (choice)
+        {
+        case '1':
+            list.addNode();
+            break;
+        case '2':
+            list.hapus();
+            break;
+        case '3':
+            list.traverse();
+            break;
+        case '4':
+            list.revtravarse();
+            break;
+        case '5':
+            list.searchdata();
+            break;
+        case '6':
+            return 0;
+        default:
+            cout << "Invalid Option\n";
+        }
+        cout << "\n Press enter tp countinue...";
+        cin.ignore();
+        cin.get();
+        cout << endl;
+        system("clear");
+    } while (choice != '6');
 };
