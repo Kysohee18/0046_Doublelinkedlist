@@ -114,7 +114,12 @@ class DoubleLinkedList
             {
                 //step 3 link previus node
                 current->prev->next = current ->next;
+                
+                // step 4 of cirrent os not the last node
+                if (current->next !=NULL)
+                    current->next->prev =current->prev;
             }
+            
 
         }
 
