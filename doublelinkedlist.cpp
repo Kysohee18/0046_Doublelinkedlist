@@ -102,7 +102,10 @@ class DoubleLinkedList
                 cout << "Record not found" << endl;
                 return;
             }
-            //step 2 if node is at the beginning\
+
+            //step 2 if node is at the beginning
+
+
 
             if (current == START)
             {
@@ -119,6 +122,7 @@ class DoubleLinkedList
                 if (current->next !=NULL)
                     current->next->prev =current->prev;
             }
+
             //step 5 delete the node
             delete current;
             cout <<"record with roll number"<<rollNo<<"delete" <<endl;
@@ -141,12 +145,31 @@ class DoubleLinkedList
         //step3 move to the next node
         currentNode = currentNode->next;
         i++;
-        
-      
+        }
+    }  
+     void revtravarse()
+    {
+        if (START = NULL)
+        {
+            cout << "\nList is empty" << endl;
+            return;
         }
 
-      
-    } 
+        //step 1 move to the last node
+        Node *currentNode = START;
+        int i = 0;
+        while (currentNode->next != NULL)
+        {
+            currentNode = currentNode->prev;
+            i--;
+            
+       
+        }
+
+
+    }
+
+        
 
 
         
